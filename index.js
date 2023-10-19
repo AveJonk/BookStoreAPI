@@ -33,6 +33,8 @@ app.get("/users/:id", (req, res) => {
         status: 200,
         data: user,
         };
+    }  else {
+        res.status(404).json({ error: "User not found" });
     }
     res.json(result);
 });
