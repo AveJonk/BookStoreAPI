@@ -10,45 +10,15 @@ const data_users = [
 
 app.get("/users", (req, res) => {
     //mendapatkan data dari database
-    const data = data_users;
+    const Data = data_users;
 
     //memberikan respon json data
     let result = {
         status: 200,
-        data: data,
+        data: Data,
     };
 
     res.json(result);
-});
-
-app.get("/", (req, res) => {
-    res.json({
-        message: "Hallo ini response json",
-    });
-});
-
-app.get("/tuturut", (req, res) => {
-    res.json({
-        message: "Yo wassap ini tuturut 1",
-    });
-});
-
-app.post("/tuturut", (req, res) => {
-    res.json({
-        message: "Yo wassap ini tuturut 2",
-    });
-});
-
-app.put("/tuturut", (req, res) => {
-    res.json({
-        message: "Yo wassap ini tuturut 3",
-    });
-});
-
-app.delete("/tuturut", (req, res) => {
-    res.json({
-        message: "Yo wassap ini tuturut",
-    });
 });
 
 app.listen(port,() => console.log(`Server running on port ${port}`))
